@@ -63,12 +63,26 @@ namespace WindowsFormsApp1
                 this.BackColor = Color.Green;
                 btngreen.Visible = true;
             };
+            btnblue = new Button();
+            btnblue.Text = "Blue";
+            btnblue.ForeColor = Color.Green;
+            btnblue.Size = new Size(90, 100);
+            btnblue.Location = new Point(260, 250);
+            btnblue.BackColor = Color.Aquamarine;
+            btnblue.Font = new Font("Times New Roman", 13, FontStyle.Bold | FontStyle.Italic);
+            btnblue.Click += (e, sender) =>
+            {
+                this.BackColor = Color.Blue;
+                btngreen.Visible = true;
+            };
 
             this.Controls.Add(btnred);
             this.Controls.Add(btngreen);
+            this.Controls.Add(btnblue);
         }
         Button btnred;
         Button btngreen;
+        Button btnblue;
 
         #endregion
     }
